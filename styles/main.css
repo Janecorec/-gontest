@@ -1,0 +1,48 @@
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.center{
+    background-color: gray;
+    width: 1px;
+    height: 1px;
+    top: -0px;
+    position: relative;
+}
+
+.crosshair{
+    position: absolute;
+    top: -47px;
+    left: -47px;
+}
+
+.cross{
+    transform: scale(.5);
+}
+
+
+@keyframes blink {
+    to {visibility: hidden;}    
+}
+
+.dot{
+    animation: blink 1s infinite;
+    animation-timing-function: steps(2,start);
+    position: absolute;
+    z-index: 2;
+    top: -0px;
+    left: -0px;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+}
